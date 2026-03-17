@@ -1,0 +1,17 @@
+{
+  "name": "lecture7",
+  "version": "1.0.0",
+  "description": "a backend at chai and code channel - youtube",
+  "keywords": [
+    "javascripts",
+    "backend",
+    "chai"
+  ],
+  "license": "ISC",
+  "author": "shivam anand",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
