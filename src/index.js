@@ -1,13 +1,15 @@
 // require ('dotenv').config({path: './env'})
 import dotenv from "dotenv"
+dotenv.config({
+   path: "./.env"
+});
+
+console.log("URI:", process.env.MONGODB_URI); 
 
 import connectDB from "./db/index.js";
 
-
-dotenv.config({
-   path: "./env"
-})
 connectDB()
+
 
 
 
@@ -23,7 +25,7 @@ connectDB()
 
 // ;(async () => {
 //     try{
-//    await mongoose.connect(`${process.env.MONGDDB_URI}/${DB_NAME}`)
+//    await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
 //    app.on("error" , (error)=> {
 //     console.log("ERROR:" ,error);
 //     throw error
