@@ -9,6 +9,17 @@ console.log("URI:", process.env.MONGODB_URI);
 import connectDB from "./db/index.js";
 
 connectDB()
+.then(() => {
+   app.listen(process.env.PORT || 8000 , () => {
+      console.log(`server is running at port : ${process.env.PORT}`);
+
+   })
+})
+.console.error((err) => {
+   console.log("MONGO db connection failed !!!" ,err);
+   
+});
+
 
 
 
