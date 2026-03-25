@@ -1,14 +1,10 @@
 import dotenv from "dotenv";
-import express from "express";
+import {app} from './app.js'
 import connectDB from "./db/index.js";
 
 dotenv.config({
    path: "./.env"
 });
-
-const app = express();
-
-console.log("URI:", process.env.MONGODB_URI); 
 
 connectDB()
 .then(() => {
