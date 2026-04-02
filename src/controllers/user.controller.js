@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
@@ -5,6 +6,7 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import { User } from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 import { upload } from "../middlewares/multer.middleware.js";
+
 
 
 const generateAccessAndRefereshTokens = async (userId) => {
@@ -424,7 +426,7 @@ const getWatchHistory = asyncHandler(async (req, res) => {
                         from: "videos",
                         localField: "watchHistory",
                         foreignField: "_id",
-                        as: "watchHisstory",
+                        as: "watchHistory",
                         pipeline: [
                               {
                                     $lookup: {
